@@ -1,3 +1,17 @@
+:root {
+  --blue: #2C3386;
+  --blue-1:#0015CE;
+  --blue-4:#6776FF;
+  --light-blue-1:#97B8D7;
+  --light-blue-3:#BAD0E4;
+  --light-blue-5:#DCE7F2;
+  --gray: #EDEDED;
+  --red-1: #E52032;
+  --orange-1:#F4770A;
+  --orange-3:#F8A45B;
+  --orange-5: #FCD2AD;
+  --body-font: var(Kumbh Sans);
+}
 * {
   margin: 0;
   padding: 0;
