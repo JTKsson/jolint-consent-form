@@ -49,8 +49,17 @@ const OverviewBox = () => {
         {boxDatas.map((boxData) => (
             <div>
                 <div>
-                    <Image src={boxData.icon} alt={boxData.alt} width={31} height={26} />
-                    <Image src={boxData.box} alt= {boxData.altCheck} width={25} height={20} />
+                    <Image 
+                        src={boxData.icon} 
+                        alt={boxData.alt} 
+                        width={31} 
+                        height={26}  />
+                    <Image 
+                        src={boxData.box} 
+                        alt= {boxData.altCheck} 
+                        width={25} 
+                        height={20} 
+                        grayscale={true} />
                 </div>
                 <h3>{boxData.title}</h3>
                 <p>{boxData.text}</p>
