@@ -1,4 +1,5 @@
 :root {
+
   --blue: #2C3386;
   --blue-1:#0015CE;
   --blue-4:#6776FF;
@@ -11,7 +12,13 @@
   --orange-3:#F8A45B;
   --orange-5: #FCD2AD;
   --body-font: var(Kumbh Sans);
+
+  --padding-base: 16px;
+  --padding-large: 24px;
+  --padding-xl: 32px;
+  --padding-s: 8px;
 }
+
 * {
   margin: 0;
   padding: 0;
