@@ -1,3 +1,10 @@
+:root {
+  --padding-base: 16px;
+  --padding-large: 24px;
+  --padding-xl: 32px;
+  --padding-s: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
