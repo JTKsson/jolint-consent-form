@@ -1,5 +1,6 @@
-<<<<<<< HEAD
-import Header from './components/Header'
+import Header from "./components/Header";
+import MainContent from "./components/MainContent";
+import Footer from "./components/Footer/";
 import { Heading } from './components/Heading'
 
 export default function Home() {
@@ -8,7 +9,7 @@ export default function Home() {
       <Header />
       <Heading />
       <MainContent />
-        <Footer />
+      <Footer />
     </>
   )
 }
