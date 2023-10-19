@@ -57,7 +57,6 @@ const OverviewBox = () => {
               alt={boxData.altCheck}
               width={25}
               height={20}
-              grayscale={true}
             />
           </div>
           <h3>{boxData.title}</h3>
