@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 import Styles from './header.module.css'
 
-
 const Header = () => {
   return (
     <div className={Styles.header}>
