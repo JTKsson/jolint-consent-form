@@ -10,8 +10,7 @@ export default function Home() {
       <Header />
       <Heading />
       <MainContent />
-      <Footer />
-
+      <Footer />      
     </>
   )
 }
