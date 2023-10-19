@@ -14,7 +14,7 @@ const Footer = () => {
 
         <ul className={Styles.icon}>
           <li>
-            <a href="https://www.linkedin.com/login/sv" target="_blank">
+            <a href="https://www.linkedin.com/company/jolint-network-analytics-ab/" target="_blank">
               <img src="/linkedIn.png" alt="icon" />
               <p>Jolint</p>
             </a>
