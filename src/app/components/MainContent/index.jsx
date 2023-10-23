@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import formCopy from '@/app/assets/formCopy'
+import OverviewBox from '../OverviewBox'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -11,6 +12,7 @@ export const MainContent = () => {
       <div>
         <h2>{formCopy[currentIndex].subtitle}</h2>
         <p>{formCopy[currentIndex].content}</p>
+        <OverviewBox />
       </div>
 
       {currentIndex !== 0 && (
