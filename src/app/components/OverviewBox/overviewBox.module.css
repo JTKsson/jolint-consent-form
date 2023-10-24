@@ -1,95 +1,46 @@
 .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 19px;
-    margin: 36px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 19px;
+  margin: 36px;
 }
 .box {
-    
-    border: 1px solid #B7B7B7;
-    border-radius: 10px;
-    width: 270px;
-    height: 270px;
-    padding: var(--padding-large);
-    flex-shrink: 0;
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+  width: 270px;
+  height: 270px;
+  padding: var(--padding-large);
+  flex-shrink: 0;
 }
 
 .boxHeader {
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-}
-/*
-.icon {
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-  
-}
-*/
-
-.icon-introIcon {
-    background-color: #9AA4FF;
-    height: 51px;
-    width: 51px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-
-}
-
-.icon-purposeIcon {
-    background-color: #F6B5BB;
-    width: 52px;
-    height: 51px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.icon-rightsIcon {
-    background-color: #FCD2AD;
-    width: 49px;
-    height: 51px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
-}
-
-.icon-consentIcon {
-    background-color: #DCE7F2;
-    width: 51px;
-    height: 51px;
-    display: flex;
-    align-items: center;
-    border-radius: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
 }
 
 .image {
- margin-left: auto;
- margin-right: auto;
- 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .checkBox {
-    align-items: center;
-    background-color: #7ACD6D;
-    border: 1px solid #B7B7B7;
-    border-radius: 5px;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    flex-shrink: 0;
-    display: flex;
+  align-items: center;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: flex;
 }
 
 .title {
-    
-    padding-top: var(--padding-large);
-    padding-bottom: var(--padding-large);;
+  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-large);
 }
 
 .text {
-    line-height: 1.6;
+  line-height: 1.6;
 }

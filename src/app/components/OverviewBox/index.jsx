@@ -2,7 +2,7 @@ import introIcon from '../../../../public/introIcon.jpg'
 import purposeIcon from '../../../../public/purposeIcon.jpg'
 import rightsIcon from '../../../../public/rightsIcon.jpg'
 import consentIcon from '../../../../public/consentIcon.jpg'
-import checkActive from '../../../../public/checkActive.jpg'
+import checkActive from '../../../../public/overview-box-icons/checkBoxActive.jpg'
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
@@ -51,22 +51,23 @@ const OverviewBox = () => {
       {boxDatas.map((boxData) => (
         <div key={boxData.id} className={Styles.box}>
           <div className={Styles.boxHeader}>
-            
-          <div className={`${Styles.icon}-${boxData.icon[0]}`}>
-    
-            <Image className={Styles.image}
-              src={boxData.icon}
-              alt={boxData.alt}
-              width={31}
-              height={26}
+            <div>
+              <Image
+                className={Styles.image}
+                src={boxData.icon}
+                alt={boxData.alt}
+                width={31}
+                height={26}
               />
             </div>
+
             <div className={Styles.checkBox}>
-            <Image className={Styles.imageCheckBox}
-              src={boxData.box}
-              alt={boxData.altCheck}
-              width={25}
-              height={20}
+              <Image
+                className={Styles.imageCheckBox}
+                src={boxData.box}
+                alt={boxData.altCheck}
+                width={35}
+                height={35}
               />
             </div>
           </div>
