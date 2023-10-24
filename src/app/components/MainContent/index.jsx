@@ -2,6 +2,8 @@
 
 import { useState } from 'react'
 import formCopy from '@/app/assets/formCopy'
+import { OverviewPage } from '../OverviewPage'
+import { InfoPage } from '../InfoPage'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -9,8 +11,14 @@ export const MainContent = () => {
   return (
     <>
       <div>
-        <h2>{formCopy[currentIndex].subtitle}</h2>
-        <p>{formCopy[currentIndex].content}</p>
+        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
+        {formCopy[currentIndex].pageType === 'info' && 
+          <>
+            <h2>{formCopy[currentIndex].subtitle}</h2>
+            <p>{formCopy[currentIndex].content}</p>
+          </>
+        }
+        
       </div>
 
       {currentIndex !== 0 && (
