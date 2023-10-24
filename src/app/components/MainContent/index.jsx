@@ -34,7 +34,7 @@ export const MainContent = () => {
           onClick={() => setCurrentIndex(currentIndex + 1)}
           disabled={currentIndex === formCopy.length - 1}
         >
-          Next
+          {currentIndex === 0 ? 'Start' : 'Next'}
         </button>
       )}
     </>
