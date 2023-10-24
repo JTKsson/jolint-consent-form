@@ -16,7 +16,7 @@
 
 /* colours */
 
-  --blue-dark: #2C3386;
+  --c-blue-dark: #2C3386;
   --c-blue-light: #97B8D7;
   --c-blue: #3449FF;
   --c-grey-dark: #CCCCCC;
@@ -26,11 +26,13 @@
   --c-red: #EA4554;
   --c-violet: #9AA4FF;
 
-  --btn-blue: var(--c-blue);
-  --btn-orange: var(--c-orange);
+  --c-btn-blue: var(--c-blue);
+  --c-btn-orange: var(--c-orange);
 
   --c-text-dark: #000;
   --c-text-light: #fff;
+
+  --c-border-grey: #B7B7B7;
 
 /* fonts */
 
