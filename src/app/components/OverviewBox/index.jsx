@@ -8,7 +8,6 @@ import Styles from './overviewBox.module.css'
 
 const boxDatas = [
   {
-    id: 1,
     icon: introIcon,
     alt: 'icon for intro section',
     box: checkActive,
@@ -17,7 +16,6 @@ const boxDatas = [
     text: 'Let Jolint introduce themselves to you',
   },
   {
-    id: 2,
     icon: purposeIcon,
     alt: 'icon for purpose section',
     box: checkActive,
@@ -26,7 +24,6 @@ const boxDatas = [
     text: 'The purpose of having Jolint in your company',
   },
   {
-    id: 3,
     icon: rightsIcon,
     alt: 'icon for my rights section',
     box: checkActive,
@@ -35,7 +32,6 @@ const boxDatas = [
     text: 'Your rights with the processing of your personal data',
   },
   {
-    id: 4,
     icon: consentIcon,
     alt: 'icon for consent section',
     box: checkActive,
@@ -49,7 +45,7 @@ const OverviewBox = () => {
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
-        <div key={boxData.id} className={Styles.box}>
+        <div className={Styles.box}>
           <div className={Styles.boxHeader}>
             <div>
               <Image
