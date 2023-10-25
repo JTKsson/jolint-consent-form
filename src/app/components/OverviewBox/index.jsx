@@ -1,8 +1,8 @@
-import introIcon from '../../../../public/introIcon.jpg'
-import purposeIcon from '../../../../public/purposeIcon.jpg'
-import rightsIcon from '../../../../public/rightsIcon.jpg'
-import consentIcon from '../../../../public/consentIcon.jpg'
-import checkActive from '../../../../public/overview-box-icons/checkBoxActive.jpg'
+import introIcon from 'public/overview-box-icons/introduction-icon.svg'
+import purposeIcon from 'public/overview-box-icons/purpose-icon-grey.svg'
+import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
+import consentIcon from 'public/overview-box-icons/consent-icon.svg'
+import checkActive from '../../../../public/checkActive.jpg'
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 

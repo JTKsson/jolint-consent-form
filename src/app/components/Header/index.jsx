@@ -7,7 +7,7 @@ const Header = () => {
     <div>
       <Link href="https://jolint.com/" target="_blank">
         <Image
-          src="/JOLINT-logo.svg.jpg"
+          src="/JOLINT-logo.svg"
           width={120}
           height={35.518}
           alt="Jolint logo"

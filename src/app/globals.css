@@ -1,8 +1,43 @@
 :root {
+  /* padding */
+
   --padding-base: 16px;
+  --padding-s: 8px;
   --padding-large: 24px;
   --padding-xl: 32px;
-  --padding-s: 8px;
+
+  /* font-size */
+
+  --font-size-base: 16px;
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-footer: 14px;
+
+  /* colours */
+
+  --c-blue-dark: #2c3386;
+  --c-blue-light: #97b8d7;
+  --c-blue: #3449ff;
+  --c-grey-dark: #cccccc;
+  --c-green: #7acd6d;
+  --c-grey-light: #ededed;
+  --c-orange: #f4770a;
+  --c-red: #ea4554;
+  --c-violet: #9aa4ff;
+
+  --c-btn-blue: var(--c-blue);
+  --c-btn-orange: var(--c-orange);
+
+  --c-text-dark: #000;
+  --c-text-light: #fff;
+
+  --c-border-grey: #b7b7b7;
+
+  /* fonts */
+
+  --font-h1: 'Poppins', sans serif;
+  --font-h2: 'Kumbh Sans', sans serif;
+  --font-btn: 'Kumbh Sans', sans serif;
 }
 
 * {
