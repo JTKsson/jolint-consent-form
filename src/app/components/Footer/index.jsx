@@ -1,6 +1,6 @@
-import Styles from './footer.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+import Styles from "./footer.module.css";
+import Image from 'next/image';
+import Link from 'next/link';
 
 const Footer = () => {
   return (
@@ -14,10 +14,7 @@ const Footer = () => {
 
         <ul className={Styles.icon}>
           <li>
-            <a
-              href="https://www.linkedin.com/company/jolint-network-analytics-ab/"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/company/jolint-network-analytics-ab/" target="_blank">
               <img src="/linkedIn.png" alt="icon" />
               <p>Jolint</p>
             </a>
@@ -56,7 +53,7 @@ const Footer = () => {
         <p>Copyright © 2023 Jolint | Powered by Jolint</p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
