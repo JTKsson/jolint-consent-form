@@ -1,8 +1,8 @@
 import introIcon from 'public/overview-box-icons/introduction-icon.svg'
-import purposeIcon from 'public/overview-box-icons/purpose-icon-grey.svg'
+import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
 import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
 import consentIcon from 'public/overview-box-icons/consent-icon.svg'
-import checkActive from '../../../../public/checkActive.jpg'
+import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
@@ -56,8 +56,8 @@ const OverviewBox = () => {
                 className={Styles.image}
                 src={boxData.icon}
                 alt={boxData.alt}
-                width={31}
-                height={26}
+                width={45}
+                height={45}
               />
             </div>
 
@@ -66,8 +66,8 @@ const OverviewBox = () => {
                 className={Styles.imageCheckBox}
                 src={boxData.box}
                 alt={boxData.altCheck}
-                width={35}
-                height={35}
+                width={30}
+                height={30}
               />
             </div>
           </div>
