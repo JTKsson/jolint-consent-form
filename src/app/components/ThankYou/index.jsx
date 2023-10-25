@@ -6,20 +6,22 @@ import Styles from "./thankyou.module.css";
 const ThankYou = () => {
   return (
     <div className={Styles.thanks}>
-      
+      <div>
+
         <Image
           src={checkActive}
           alt="Icon of check being active"
-          weight={64}
-          height={51}
-        />
-        <h1>Thank you!</h1>
-      <p>
+          weight={70}
+          height={70}
+          />
+        </div>
+        <h1 className={Styles.title}>Thank you!</h1>
+      <p className={Styles.text}>
         Your consent form was successfully submitted. We appreciate your
         collaboration. Thank you!
       </p>
       <Link href="https://jolint.com/">
-        <button>Close</button>
+        <button className={Styles.button}>Close</button>
       </Link>
     </div>
   )

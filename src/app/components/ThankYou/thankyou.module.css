@@ -1,3 +1,28 @@
 .thanks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
+    flex-grow: 1;
+}
+
+
+
+.title {
+    padding: var(--padding-xl);
+    font-size: var(--font-size-h1);
+    font-weight: 800;
+}
+
+.text {
+    padding-bottom: var(--padding-xl);
+}
+.button {
+    width: 175px;
+    padding: var(--padding-base);
+    border-radius: 10px;
+    background-color: #0015CE;
+    color: var(--c-text-light);
+    font-size: var(--font-size-base);
+    
 }
