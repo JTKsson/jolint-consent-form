@@ -1,14 +1,14 @@
 import Header from './components/Header'
-import MainContent from './components/MainContent'
-import Footer from './components/Footer/'
 import { Heading } from './components/Heading'
-import ThankYou from './components/ThankYou'
+import MainContent from './components/MainContent'
+import Footer from './components/Footer'
 
 export default function Home() {
   return (
     <>
       <Header />
-      <ThankYou />
+      <Heading />
+      <MainContent />
       <Footer />
     </>
   )
