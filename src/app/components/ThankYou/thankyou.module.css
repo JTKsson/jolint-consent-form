@@ -4,6 +4,7 @@
   justify-content: center;
   text-align: center;
   flex-grow: 1;
+  padding: 16px;
 }
 
 .title {
@@ -15,6 +16,7 @@
 .text {
   padding-bottom: var(--padding-xl);
 }
+
 .button {
   width: 175px;
   padding: var(--padding-base);
@@ -22,4 +24,10 @@
   background-color: #0015ce;
   color: var(--c-text-light);
   font-size: var(--font-size-base);
+  cursor: pointer;
+
+}
+.button:hover {
+  background-color: var(--c-blue);
+  
 }

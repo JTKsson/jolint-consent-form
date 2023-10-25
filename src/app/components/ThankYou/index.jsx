@@ -19,9 +19,12 @@ const ThankYou = () => {
         Your consent form was successfully submitted. We appreciate your
         collaboration. Thank you!
       </p>
+      <div >
       <Link href="https://jolint.com/">
-        <button className={Styles.button}>Close</button>
+      <button className={Styles.button}>Close</button>
       </Link>
+      </div>
+
     </div>
   )
 }
