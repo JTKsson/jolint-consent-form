@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import checkActive from '/public/checkround.svg'
 import Link from 'next/link'
-import Styles from './thankyou.module.css'
+import Styles from './thankYou.module.css'
 
 const ThankYou = () => {
   return (
