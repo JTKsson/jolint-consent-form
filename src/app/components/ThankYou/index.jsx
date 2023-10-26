@@ -1,27 +1,30 @@
 import Image from 'next/image'
-import checkActive from '../../../../public/checkActive.jpg'
+import checkActive from '/public/checkround.svg'
 import Link from 'next/link'
+import Styles from './thankYou.module.css'
 
 const ThankYou = () => {
   return (
-    <>
-      <div>
+    <div className={Styles.thanks}>
+      <div className={Styles.picture}>
         <Image
           src={checkActive}
           alt="Icon of check being active"
-          weight={64}
-          height={51}
+          width={70}
+          height={70}
         />
-        <h1>Thank you!</h1>
       </div>
-      <p>
+      <h1 className={Styles.title}>Thank you!</h1>
+      <p className={Styles.text}>
         Your consent form was successfully submitted. We appreciate your
         collaboration. Thank you!
       </p>
-      <Link href="https://jolint.com/">
-        <button>Close</button>
-      </Link>
-    </>
+      <div>
+        <Link href="https://jolint.com/">
+          <button className={Styles.button}>Close</button>
+        </Link>
+      </div>
+    </div>
   )
 }
 

@@ -1,0 +1,6 @@
+.header {
+  border-bottom: 2px solid #cecece;
+  height: 100%;
+  padding: var(--padding-large);
+  width: 100%;
+}
