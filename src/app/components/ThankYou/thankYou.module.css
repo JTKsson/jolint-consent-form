@@ -18,7 +18,7 @@
   }
   
   .button {
-    background-color: #0015ce;
+    background-color: var(--c-btn-blue);
     border-radius: 10px;
     color: var(--c-text-light);
     cursor: pointer;
@@ -27,5 +27,5 @@
     width: 175px;
   }
   .button:hover {
-    background-color: var(--c-blue);
+    background-color: var(--c-blue-dark);
   }
