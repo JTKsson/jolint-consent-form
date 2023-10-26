@@ -1,7 +1,6 @@
 .header {
-    width: 100%;
-    height: 100%;
-    padding: var(--padding-large);
-    border-bottom: 2px solid #cecece;
-  }
-  
+  border-bottom: 2px solid #cecece;
+  height: 100%;
+  padding: var(--padding-large);
+  width: 100%;
+}
