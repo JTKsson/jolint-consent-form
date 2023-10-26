@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 19px;
+  margin: 36px;
+}
+.box {
+  border: 1px solid #b7b7b7;
+  border-radius: 10px;
+  width: 270px;
+  height: 270px;
+  padding: var(--padding-large);
+  flex-shrink: 0;
+}
+
+.boxHeader {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.checkBox {
+  align-items: center;
+  border: 1px solid #b7b7b7;
+  border-radius: 5px;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+  display: flex;
+}
+
+.title {
+  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-large);
+}
+
+.text {
+  line-height: 1.6;
+}
