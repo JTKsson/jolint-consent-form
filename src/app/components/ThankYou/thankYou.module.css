@@ -1,0 +1,31 @@
+.thanks {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  padding: 16px;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-h1);
+  font-weight: 800;
+  padding: var(--padding-xl);
+}
+
+.text {
+  padding-bottom: var(--padding-xl);
+}
+
+.button {
+  background-color: var(--c-btn-blue);
+  border-radius: 10px;
+  color: var(--c-text-light);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  padding: var(--padding-base);
+  width: 175px;
+}
+.button:hover {
+  background-color: var(--c-blue-dark);
+}
