@@ -1,9 +1,10 @@
 import introIcon from 'public/overview-box-icons/introduction-icon.svg'
-import purposeIcon from 'public/overview-box-icons/purpose-icon-grey.svg'
+import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
 import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
 import consentIcon from 'public/overview-box-icons/consent-icon.svg'
-import checkActive from '../../../../public/checkActive.jpg'
+import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
 import Image from 'next/image'
+import Styles from './overviewBox.module.css'
 
 const boxDatas = [
   {
@@ -12,7 +13,7 @@ const boxDatas = [
     box: checkActive,
     altCheck: 'icon for checkbox',
     title: 'Introduction',
-    text: 'Let Jolint introduce them selves to you',
+    text: 'Let Jolint introduce themselves to you',
   },
   {
     icon: purposeIcon,
@@ -42,25 +43,32 @@ const boxDatas = [
 
 const OverviewBox = () => {
   return (
-    <div>
+    <div className={Styles.container}>
       {boxDatas.map((boxData) => (
-        <div>
-          <div>
-            <Image
-              src={boxData.icon}
-              alt={boxData.alt}
-              width={31}
-              height={26}
-            />
-            <Image
-              src={boxData.box}
-              alt={boxData.altCheck}
-              width={25}
-              height={20}
-            />
+        <div className={Styles.box}>
+          <div className={Styles.boxHeader}>
+            <div>
+              <Image
+                className={Styles.image}
+                src={boxData.icon}
+                alt={boxData.alt}
+                width={45}
+                height={45}
+              />
+            </div>
+
+            <div className={Styles.checkBox}>
+              <Image
+                className={Styles.imageCheckBox}
+                src={boxData.box}
+                alt={boxData.altCheck}
+                width={30}
+                height={30}
+              />
+            </div>
           </div>
-          <h3>{boxData.title}</h3>
-          <p>{boxData.text}</p>
+          <h3 className={Styles.title}>{boxData.title}</h3>
+          <p className={Styles.text}>{boxData.text}</p>
         </div>
       ))}
     </div>
