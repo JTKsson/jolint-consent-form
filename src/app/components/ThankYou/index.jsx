@@ -6,7 +6,7 @@ import Styles from './thankyou.module.css'
 const ThankYou = () => {
   return (
     <div className={Styles.thanks}>
-      <div className={Styles.group}>
+      <div>
         <Image
           src={checkActive}
           alt="Icon of check being active"
