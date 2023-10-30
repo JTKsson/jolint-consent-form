@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    flex-direction: row;
+    margin: 0px var(--padding-large);
+    padding:var(--padding-xl)
+}
+
+.title {
+    padding: 0 var(--padding-large)
+}
