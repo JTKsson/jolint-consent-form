@@ -24,9 +24,9 @@ const Footer = () => {
             </a>
           </li>
           <li className={Styles.email}>
-            <a 
+            <a
               className={Styles.links}
-              href="mailto:hello@jolint.com" 
+              href="mailto:hello@jolint.com"
               target="_blank"
             >
               <svg

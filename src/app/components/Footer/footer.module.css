@@ -19,7 +19,7 @@
   list-style-type: none;
 }
 
-.li { 
+.li {
   padding: 0px 0px var(--padding-base) var(--padding-base);
 }
 
@@ -33,13 +33,13 @@
   text-align: center;
 }
 
-.links{
+.links {
   align-items: center;
   display: flex;
 }
 
 .email {
-  padding: 3px
+  padding: 3px;
 }
 
 .name {
@@ -53,11 +53,11 @@
 }
 
 @media (max-width: 500px) {
- .footerComponent{
+  .footerComponent {
     align-items: center;
     flex-direction: column;
- }
- .icon {
-  padding: var(--padding-base);
- }
+  }
+  .icon {
+    padding: var(--padding-base);
+  }
 }
