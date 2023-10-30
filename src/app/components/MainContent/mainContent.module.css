@@ -1,12 +1,12 @@
 .content {
-    margin: 0px var(--padding-xl);
-    padding: 0px var(--padding-large);
+  margin: 0px var(--padding-xl);
+  padding: 0px var(--padding-large);
 }
 
 .title {
-    padding: 0px var(--padding-large) var(--padding-large) var(--padding-large);
+  padding: 0px var(--padding-large) var(--padding-large) var(--padding-large);
 }
 
 .text {
-    padding: 0px var(--padding-large)var(--padding-large) var(--padding-large);
+  padding: 0px var(--padding-large) var(--padding-large) var(--padding-large);
 }
