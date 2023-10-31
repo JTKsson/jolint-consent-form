@@ -40,3 +40,7 @@
 .text {
   line-height: 1.6;
 }
+
+.notMet {
+  filter: grayscale(1);
+}

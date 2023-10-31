@@ -1,11 +1,11 @@
 import overviewPageCopy from '@/app/assets/overviewPageCopy'
 import OverviewBox from '../OverviewBox'
 
-export const OverviewPage = () => {
+export const OverviewPage = ({currentIndex}) => {
   return (
     <>
       <p>{overviewPageCopy}</p>
-      <OverviewBox />
+      <OverviewBox currentIndex={currentIndex}/>
     </>
   )
 }

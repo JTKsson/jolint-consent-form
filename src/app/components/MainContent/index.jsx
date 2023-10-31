@@ -4,6 +4,7 @@ import { useState } from 'react'
 import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
+import OverviewBox from '../OverviewBox'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -11,7 +12,7 @@ export const MainContent = () => {
   return (
     <>
       <div>
-        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
+        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage currentIndex={currentIndex}/>}
         {formCopy[currentIndex].pageType === 'info' && (
           <>
             <h2>{formCopy[currentIndex].subtitle}</h2>
