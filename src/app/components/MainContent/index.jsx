@@ -4,6 +4,7 @@ import { useState } from 'react'
 import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
+import Styles from './mainContent.module.css'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -13,10 +14,10 @@ export const MainContent = () => {
       <div>
         {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
         {formCopy[currentIndex].pageType === 'info' && (
-          <>
-            <h2>{formCopy[currentIndex].subtitle}</h2>
-            <p>{formCopy[currentIndex].content}</p>
-          </>
+          <div className={Styles.content}>
+            <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
+            <p className={Styles.text}>{formCopy[currentIndex].content}</p>
+          </div>
         )}
         {formCopy[currentIndex].pageType === 'thanks' && <ThankYou />}
       </div>
