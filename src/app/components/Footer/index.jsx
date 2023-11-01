@@ -2,12 +2,9 @@ import Styles from './footer.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 
-
 const Footer = () => {
   return (
-    <footer 
-    
-      className={Styles.footer}>
+    <footer className={Styles.footer}>
       <div className={Styles.footerComponent}>
         <ul className={Styles.media}>
           <li className={Styles.li}>Jolint Network Analytics AB</li>
