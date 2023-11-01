@@ -17,7 +17,8 @@ const OverviewBox = ({currentIndex}) => {
       altCheck: 'icon for checkbox',
       title: 'Introduction',
       text: 'Let Jolint introduce themselves to you',
-      criteriaMet: currentIndex >= 0,
+      unlocked: currentIndex >= 0,
+      checkBoxDone: currentIndex >= 3,
     },
     {
       icon: purposeIcon,
@@ -26,7 +27,8 @@ const OverviewBox = ({currentIndex}) => {
       altCheck: 'icon for checkbox',
       title: 'Purpose',
       text: 'The purpose of having Jolint in your company',
-      criteriaMet: currentIndex >= 3,
+      unlocked: currentIndex >= 3,
+      checkBoxDone: currentIndex >= 5,
     },
     {
       icon: rightsIcon,
@@ -35,7 +37,8 @@ const OverviewBox = ({currentIndex}) => {
       altCheck: 'icon for checkbox',
       title: 'Your Rights',
       text: 'Your rights with the processing of your personal data',
-      criteriaMet: currentIndex >= 5,
+      unlocked: currentIndex >= 5,
+      checkBoxDone: currentIndex >= 9,
     },
     {
       icon: consentIcon,
@@ -44,16 +47,19 @@ const OverviewBox = ({currentIndex}) => {
       altCheck: 'icon for checkbox',
       title: 'Consent',
       text: 'Sign to improve inclusion and belonging in your company',
-      criteriaMet: currentIndex >= 9,
+      unlocked: currentIndex >= 9,
+      checkBoxDone: currentIndex >= 13,
     },
   ]
+
+  console.log({currentIndex})
   
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
         <div
           className={`${Styles.box} ${
-            !boxData.criteriaMet ? Styles.notMet : ''
+            !boxData.unlocked ? Styles.notMet : ''
           }`}
         >
           <div className={Styles.boxHeader}>
@@ -69,7 +75,9 @@ const OverviewBox = ({currentIndex}) => {
 
             <div className={Styles.checkBox}>
               <Image
-                className={Styles.imageCheckBox}
+                className={`${Styles.imageCheckBox} ${
+                  !boxData.checkBoxDone ? Styles.checkboxUnchecked : ''
+                }`}
                 src={boxData.box}
                 alt={boxData.altCheck}
                 width={30}
@@ -81,7 +89,6 @@ const OverviewBox = ({currentIndex}) => {
           <p className={Styles.text}>{boxData.text}</p>
         </div>
       ))}
-            <p>{currentIndex}</p>
     </div>
   )
 }

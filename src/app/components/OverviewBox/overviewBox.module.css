@@ -44,3 +44,7 @@
 .notMet {
   filter: grayscale(1);
 }
+
+.checkboxUnchecked {
+  display: none;
+}
