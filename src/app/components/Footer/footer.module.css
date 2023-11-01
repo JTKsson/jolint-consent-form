@@ -1,7 +1,6 @@
 .footer {
   background: #2c3386;
   color: var(--c-text-light);
-  font-family: Inter;
   font-size: var(--font-size-footer);
   height: 100%;
   padding: var(--padding-base);

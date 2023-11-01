@@ -1,3 +1,7 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300&display=swap');
+
 :root {
   /* padding */
 
@@ -37,8 +41,8 @@
   /* fonts */
 
   --font-h1: 'Poppins', sans serif;
-  --font-h2: 'Kumbh Sans', sans serif;
-  --font-btn: 'Kumbh Sans', sans serif;
+  --font-h2: 'Kumbh_Sans', sans serif;
+  --font-btn: 'Kumbh_Sans', sans serif;
 }
 
 * {
