@@ -1,4 +1,4 @@
-import ThankYou from "../components/ThankYou"
+import ThankYou from '../components/ThankYou'
 
 const testPage = () => {
   return (
