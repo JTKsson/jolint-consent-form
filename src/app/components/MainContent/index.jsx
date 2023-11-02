@@ -24,6 +24,7 @@ export const MainContent = () => {
 
       {currentIndex !== 0 && currentIndex !== formCopy.length - 1 && (
         <button
+          className={Styles.backButton}
           onClick={() => setCurrentIndex(currentIndex - 1)}
           disabled={currentIndex === 0}
         >
@@ -35,6 +36,7 @@ export const MainContent = () => {
         formCopy[currentIndex].buttonType !== 'done' &&
         formCopy[currentIndex].pageType !== 'thanks' && (
           <button
+            className={Styles.blueButton}
             onClick={() => setCurrentIndex(currentIndex + 1)}
             disabled={currentIndex === formCopy.length - 1}
           >
@@ -42,10 +44,18 @@ export const MainContent = () => {
           </button>
         )}
       {formCopy[currentIndex].buttonType === 'done' && (
-        <button onClick={() => setCurrentIndex(currentIndex + 1)}>Done</button>
+        <button
+          className={Styles.blueButton}
+          onClick={() => setCurrentIndex(currentIndex + 1)}
+        >
+          Done
+        </button>
       )}
       {formCopy[currentIndex].buttonType === 'submit' && (
-        <button onClick={() => setCurrentIndex(currentIndex + 1)}>
+        <button
+          className={Styles.submitButton}
+          onClick={() => setCurrentIndex(currentIndex + 1)}
+        >
           Submit
         </button>
       )}
