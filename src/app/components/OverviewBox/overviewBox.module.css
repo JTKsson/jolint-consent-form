@@ -41,7 +41,7 @@
   line-height: 1.6;
 }
 
-.notMet {
+.checkBoxLocked {
   filter: grayscale(1);
 }
 

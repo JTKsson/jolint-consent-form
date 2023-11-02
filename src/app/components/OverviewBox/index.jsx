@@ -59,7 +59,7 @@ const OverviewBox = ({currentIndex}) => {
       {boxDatas.map((boxData) => (
         <div
           className={`${Styles.box} ${
-            !boxData.unlocked ? Styles.notMet : ''
+            !boxData.unlocked ? Styles.checkBoxLocked : ''
           }`}
         >
           <div className={Styles.boxHeader}>

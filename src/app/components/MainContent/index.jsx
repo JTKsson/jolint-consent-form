@@ -4,7 +4,6 @@ import { useState } from 'react'
 import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
-import OverviewBox from '../OverviewBox'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
