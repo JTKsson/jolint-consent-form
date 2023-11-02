@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   gap: 19px;
   justify-content: space-around;
-  margin: 36px;
+  margin: var(--padding-xl) 0px;
 }
 
 .box {

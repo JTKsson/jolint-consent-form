@@ -4,12 +4,14 @@
 }
 
 .title {
-  padding: 0px var(--padding-large) var(--padding-large) var(--padding-large);
+  padding: 0px var(--padding-large) var(--padding-large) 0px;
 }
 
 .text {
-  padding: 0px var(--padding-large) var(--padding-large) var(--padding-large);
+  padding: 0px var(--padding-large) var(--padding-large) 0px;
 }
+.wrapButton {
+  margin: 0px var(--padding-xl);
 
 .blueButton {
   background-color: var(--c-blue-deep);
@@ -22,7 +24,7 @@
   font-size: 20px;
   font-weight: 700;
   height: 55px;
-  margin: 10px;
+  margin: 0px var(--padding-large);
   text-align: center;
   width: 175px;
 }
@@ -42,7 +44,7 @@
   font-size: 20px;
   font-weight: 700;
   height: 55px;
-  margin: 10px;
+  margin: 0px 0px 0px var(--padding-large);
   text-align: center;
   width: 175px;
 }
@@ -69,4 +71,5 @@
 
 .submitButton:hover {
   background-color: #f4770abd;
+}
 }

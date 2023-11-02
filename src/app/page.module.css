@@ -1,3 +1,5 @@
 .main {
   flex-grow: 1;
+  margin: var(--padding-xl);
+  padding: 0px var(--padding-large);
 }
