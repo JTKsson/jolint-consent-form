@@ -6,6 +6,9 @@
 }
 
 .title {
+  font-family: var(--font-h1);
+  font-size: var(--font-size-h1);
   padding: 0 var(--padding-large);
+
 }
 

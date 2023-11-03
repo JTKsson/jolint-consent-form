@@ -18,14 +18,18 @@
 }
 
 .button {
-  background-color: var(--c-btn-blue);
+  background-color: var(--c-blue-deep);
+  border: 3px solid var(--c-blue-deep);
   border-radius: 10px;
   color: var(--c-text-light);
   cursor: pointer;
-  font-size: var(--font-size-base);
-  padding: var(--padding-base);
-  width: 175px;
+  flex-shrink: 0;
+  font-size: 20px;
+  font-weight: 700;
+  height: 45px;
+  text-align: center;
+  width: 120px;
 }
 .button:hover {
-  background-color: var(--c-blue-dark);
+  background-color: var(--c-blue);
 }

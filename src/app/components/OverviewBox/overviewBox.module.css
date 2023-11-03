@@ -13,6 +13,7 @@
   height: 270px;
   padding: var(--padding-large);
   width: 270px;
+  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.105);
 }
 
 .boxHeader {
@@ -33,10 +34,17 @@
 }
 
 .title {
-  padding-bottom: var(--padding-large);
-  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-s);
+  padding-top: var(--padding-base);
+  font-size: var(--font-size-h2);
 }
 
 .text {
   line-height: 1.6;
+}
+
+@media (max-width: 1360px) {
+  .container{
+    
+  }
 }

@@ -11,22 +11,23 @@
   padding: 0px var(--padding-large) var(--padding-large) 0px;
 }
 .wrapButton {
+  
   margin: 0px var(--padding-xl);
 
 .blueButton {
   background-color: var(--c-blue-deep);
   border: 3px solid var(--c-blue-deep);
   border-radius: 10px;
-  box-shadow: 5px 5px 7px 3px var(--c-blue-light);
   color: var(--c-text-light);
-  font-family: var(--font-btn);
+  cursor: pointer;
   flex-shrink: 0;
+  font-family: var(--font-btn);
   font-size: 20px;
   font-weight: 700;
-  height: 55px;
+  height: 45px;
   margin: 0px var(--padding-large);
   text-align: center;
-  width: 175px;
+  width: 120px;
 }
 
 .blueButton:hover {
@@ -37,16 +38,16 @@
   background-color: var(--c-text-light);
   border: 3px solid var(--c-blue-deep);
   border-radius: 10px;
-  box-shadow: 5px 5px 7px 3px var(--c-blue-light);
   color: var(--c-text-dark);
+  cursor: pointer;
   flex-shrink: 0;
   font-family: var(--font-btn);
   font-size: 20px;
   font-weight: 700;
-  height: 55px;
+  height: 45px;
   margin: 0px 0px 0px var(--padding-large);
   text-align: center;
-  width: 175px;
+  width: 120px;
 }
 
 .backButton:hover {
@@ -57,16 +58,16 @@
   background-color: var(--c-orange);
   border: 3px solid var(--c-orange);
   border-radius: 10px;
-  box-shadow: 5px 5px 7px 3px #f4770a91;
   color: var(--c-text-light);
+  cursor: pointer;
   flex-shrink: 0;
   font-family: var(--font-btn);
   font-size: 20px;
   font-weight: 700;
-  height: 55px;
+  height: 45px;
   margin: 10px;
   text-align: center;
-  width: 175px;
+  width: 120px;
 }
 
 .submitButton:hover {
