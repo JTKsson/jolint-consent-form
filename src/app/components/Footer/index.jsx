@@ -7,23 +7,28 @@ const Footer = () => {
     <footer className={Styles.footer}>
       <div className={Styles.footerComponent}>
         <ul className={Styles.media}>
-          <li>Jolint Network Analytics AB</li>
-          <li>Org. Nr. 559324-1770</li>
-          <li>Gothenburg, Sweden</li>
+          <li className={Styles.li}>Jolint Network Analytics AB</li>
+          <li className={Styles.li}>Org. Nr. 559324-1770</li>
+          <li className={Styles.li}>Gothenburg, Sweden</li>
         </ul>
 
         <ul className={Styles.icon}>
           <li>
             <a
+              className={Styles.links}
               href="https://www.linkedin.com/company/jolint-network-analytics-ab/"
               target="_blank"
             >
               <img src="/linkedIn.png" alt="icon" />
-              <p>Jolint</p>
+              <p className={Styles.name}>Jolint</p>
             </a>
           </li>
-          <li>
-            <a href="mailto:hello@jolint.com" target="_blank">
+          <li className={Styles.email}>
+            <a
+              className={Styles.links}
+              href="mailto:hello@jolint.com"
+              target="_blank"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="28"
@@ -46,7 +51,7 @@ const Footer = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-              <p>hello@jolint.com</p>
+              <p className={Styles.name2}>hello@jolint.com</p>
             </a>
           </li>
         </ul>
