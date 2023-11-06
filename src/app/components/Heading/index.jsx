@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Styles from './heading.module.css'
 
 export const Heading = () => {
