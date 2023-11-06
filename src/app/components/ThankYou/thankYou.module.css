@@ -30,6 +30,7 @@
   text-align: center;
   width: 120px;
 }
+
 .button:hover {
   background-color: var(--c-blue);
 }

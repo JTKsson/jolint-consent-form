@@ -6,3 +6,9 @@
 .text {
   width: 50%;
 }
+
+@media (max-width: 840px) {
+  .text{
+    width: 100%;
+  }
+}

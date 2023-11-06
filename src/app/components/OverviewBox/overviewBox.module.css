@@ -2,18 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   gap: 19px;
-  justify-content: space-around;
   margin: var(--padding-xl) 0px;
 }
 
 .box {
   border: 1px solid #b7b7b7;
   border-radius: 10px;
+  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.105);
   flex-shrink: 0;
   height: 270px;
   padding: var(--padding-large);
   width: 270px;
-  box-shadow: 5px 5px 12px 3px rgba(0, 0, 0, 0.105);
 }
 
 .boxHeader {
@@ -34,17 +33,17 @@
 }
 
 .title {
+  font-size: var(--font-size-h2);
   padding-bottom: var(--padding-s);
   padding-top: var(--padding-base);
-  font-size: var(--font-size-h2);
 }
 
 .text {
   line-height: 1.6;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 840px) {
   .container{
-    
+    justify-content: center;
   }
 }
