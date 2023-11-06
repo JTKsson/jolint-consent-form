@@ -11,9 +11,14 @@
 }
 
 @media (max-width: 840px) {
-  .title{
+  .title {
     font-size: var(--font-size-h2);
     padding-bottom: var(--padding-base);
   }
 }
 
+@media (max-width: 500px) {
+  .title {
+    padding: 0px;
+  }
+}

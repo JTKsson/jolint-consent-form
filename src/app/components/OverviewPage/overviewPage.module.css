@@ -8,7 +8,14 @@
 }
 
 @media (max-width: 840px) {
-  .text{
+  .text {
     width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main {
+    margin: var(--padding-large);
+    padding: 0px;
   }
 }

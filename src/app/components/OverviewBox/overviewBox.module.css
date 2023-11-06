@@ -43,7 +43,19 @@
 }
 
 @media (max-width: 840px) {
-  .container{
+  .container {
     justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: var(--padding-base);
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: var(--padding-base) 0px;
   }
 }

@@ -21,45 +21,45 @@ export const MainContent = () => {
         )}
         {formCopy[currentIndex].pageType === 'thanks' && <ThankYou />}
       </div>
-      
+
       <div className={Styles.wrapButton}>
-      {currentIndex !== 0 && currentIndex !== formCopy.length - 1 && (
-        <button
-        className={Styles.backButton}
-        onClick={() => setCurrentIndex(currentIndex - 1)}
-        disabled={currentIndex === 0}
-        >
-          Back
-        </button>
-      )}
-      {currentIndex !== formCopy.length - 1 &&
-        formCopy[currentIndex].buttonType !== 'submit' &&
-        formCopy[currentIndex].buttonType !== 'done' &&
-        formCopy[currentIndex].pageType !== 'thanks' && (
+        {currentIndex !== 0 && currentIndex !== formCopy.length - 1 && (
           <button
-          className={Styles.blueButton}
-          onClick={() => setCurrentIndex(currentIndex + 1)}
-          disabled={currentIndex === formCopy.length - 1}
+            className={Styles.backButton}
+            onClick={() => setCurrentIndex(currentIndex - 1)}
+            disabled={currentIndex === 0}
           >
-            {currentIndex === 0 ? 'Start' : 'Next'}
+            Back
           </button>
         )}
-      {formCopy[currentIndex].buttonType === 'done' && (
-        <button
-        className={Styles.blueButton}
-        onClick={() => setCurrentIndex(currentIndex + 1)}
-        >
-          Done
-        </button>
-      )}
-      {formCopy[currentIndex].buttonType === 'submit' && (
-        <button
-        className={Styles.submitButton}
-        onClick={() => setCurrentIndex(currentIndex + 1)}
-        >
-          Submit
-        </button>
-      )}
+        {currentIndex !== formCopy.length - 1 &&
+          formCopy[currentIndex].buttonType !== 'submit' &&
+          formCopy[currentIndex].buttonType !== 'done' &&
+          formCopy[currentIndex].pageType !== 'thanks' && (
+            <button
+              className={Styles.blueButton}
+              onClick={() => setCurrentIndex(currentIndex + 1)}
+              disabled={currentIndex === formCopy.length - 1}
+            >
+              {currentIndex === 0 ? 'Start' : 'Next'}
+            </button>
+          )}
+        {formCopy[currentIndex].buttonType === 'done' && (
+          <button
+            className={Styles.blueButton}
+            onClick={() => setCurrentIndex(currentIndex + 1)}
+          >
+            Done
+          </button>
+        )}
+        {formCopy[currentIndex].buttonType === 'submit' && (
+          <button
+            className={Styles.submitButton}
+            onClick={() => setCurrentIndex(currentIndex + 1)}
+          >
+            Submit
+          </button>
+        )}
       </div>
     </>
   )

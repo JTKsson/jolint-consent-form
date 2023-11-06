@@ -9,7 +9,7 @@ export const Heading = () => {
     <div className={Styles.main}>
       <h1 className={Styles.title}>Consent Form for Data Processing</h1>
       <div>
-         <Image src={icon} alt="screen reader button" />
+        <Image src={icon} alt="screen reader button" />
       </div>
     </div>
   )
