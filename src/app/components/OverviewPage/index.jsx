@@ -4,9 +4,9 @@ import Styles from './overviewPage.module.css'
 
 export const OverviewPage = ({currentIndex}) => {
   return (
-    <>
-      <p>{overviewPageCopy}</p>
+     <div className={Styles.main}>
+      <p className={Styles.text}>{overviewPageCopy}</p>
       <OverviewBox currentIndex={currentIndex}/>
-    </>
+    </div>
   )
 }
