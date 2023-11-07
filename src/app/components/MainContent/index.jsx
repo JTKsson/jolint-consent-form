@@ -5,6 +5,7 @@ import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
+import PageIndicator from '../PageIndicator'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)

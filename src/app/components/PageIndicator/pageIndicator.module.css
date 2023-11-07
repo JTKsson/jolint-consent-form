@@ -1,0 +1,38 @@
+.page {
+    margin: 0px var(--padding-xl);
+    padding: 0px var(--padding-large);
+}
+
+.circles {
+    display: flex;
+    list-style-type: none;
+    margin-bottom: var(--padding-xl);
+    margin-left: var(--padding-xl);
+    padding: 0px var(--padding-large);
+}
+
+.list {
+    padding-right: var(--padding-large);
+}
+
+.dots {
+    height: 24px;
+    width: 24px;
+}
+
+@media (max-width: 500px) {
+    .page {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .circles {
+        margin: 0px;
+        padding: var(--padding-base);
+    }
+
+    .dots {
+        height: 16px;
+        width: 16px;
+    }
+}
