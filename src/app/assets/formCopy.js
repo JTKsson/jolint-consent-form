@@ -63,9 +63,9 @@ const formCopy = [
     pageType: 'form',
     buttonType: 'done',
     subtitle: '9. Consent',
-    content: '9.1.   By signing below, I hereby consent to the processing of my personal data as described above.',
+    content:
+      '9.1.   By signing below, I hereby consent to the processing of my personal data as described above.',
     isForm: 'true',
-
   },
   {
     pageType: 'overview',

@@ -20,17 +20,15 @@ export const MainContent = () => {
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
         )}
-        {formCopy[currentIndex].pageType === 'form' 
-        
-        && (
+
+        {formCopy[currentIndex].pageType === 'form' && (
           <div className={Styles.content}>
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
+            <ConsentForm />
           </div>
-        ) 
-        && <ConsentForm />
-        }
-        
+        )}
+
         {formCopy[currentIndex].pageType === 'thanks' && <ThankYou />}
       </div>
 
