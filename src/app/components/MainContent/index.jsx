@@ -5,6 +5,7 @@ import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
+import { Heading } from '../Heading'
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -15,6 +16,7 @@ export const MainContent = () => {
         {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
+            <Heading />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
