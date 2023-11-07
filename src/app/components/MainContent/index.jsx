@@ -12,7 +12,7 @@ export const MainContent = () => {
   return (
     <>
       <div>
-        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
+        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage currentIndex={currentIndex}/>}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>

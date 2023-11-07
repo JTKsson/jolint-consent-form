@@ -40,3 +40,11 @@
 .text {
   line-height: 1.6;
 }
+
+.checkBoxLocked {
+  filter: grayscale(1);
+}
+
+.checkboxUnchecked {
+  display: none;
+}
