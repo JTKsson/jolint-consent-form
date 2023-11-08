@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className={Styles.footer}>
       <div className={Styles.footerComponent}>
         <ul className={Styles.media}>
-          <li className={Styles.li}>Jolint Network Analytics AB</li>
+          <li>Jolint Network Analytics AB</li>
           <li className={Styles.li}>Org. Nr. 559324-1770</li>
-          <li className={Styles.li}>Gothenburg, Sweden</li>
+          <li>Gothenburg, Sweden</li>
         </ul>
 
         <ul className={Styles.icon}>
