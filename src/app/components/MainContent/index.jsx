@@ -16,6 +16,7 @@ export const MainContent = () => {
         {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
+            <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
