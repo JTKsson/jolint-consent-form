@@ -60,12 +60,12 @@ const formCopy = [
       '8.1.  If you have any questions or concerns about the processing of your personal data, please contact [insert contact details for data protection officer or other responsible person].',
   },
   {
-    pageType: 'info',
+    pageType: 'form',
     buttonType: 'done',
     subtitle: '9. Consent',
-    content: `9.1.   By signing below, I hereby consent to the processing of my personal data as described above. *Name*
-      *Date*
-      *Signature*`,
+    content:
+      '9.1.   By signing below, I hereby consent to the processing of my personal data as described above.',
+    isForm: 'true',
   },
   {
     pageType: 'overview',
