@@ -6,8 +6,7 @@
 .circles {
     display: flex;
     list-style-type: none;
-    margin-bottom: var(--padding-xl);
-    margin-left: var(--padding-xl);
+    margin: var(--padding-large) var(--padding-xl) var(--padding-large) 0px;
     padding: 0px var(--padding-large);
 }
 
@@ -18,6 +17,8 @@
 .dots {
     height: 24px;
     width: 24px;
+    fill: #b7b7b7;
+    
 }
 
 @media (max-width: 500px) {
@@ -28,11 +29,16 @@
 
     .circles {
         margin: 0px;
-        padding: var(--padding-base);
+        padding: var(--padding-large);
+        padding-bottom: 0px;
     }
 
     .dots {
         height: 16px;
         width: 16px;
+    }
+
+    .list {
+        padding-right: 10px;
     }
 }
