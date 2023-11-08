@@ -7,6 +7,7 @@ import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
 import PageIndicator from '../PageIndicator'
 import ConsentForm from '../ConsentForm'
+import { Heading } from '../Heading'
 
 
 export const MainContent = () => {
@@ -18,6 +19,7 @@ export const MainContent = () => {
         {formCopy[currentIndex].pageType === 'overview' && <OverviewPage currentIndex={currentIndex}/>}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
+            <Heading />
             <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
