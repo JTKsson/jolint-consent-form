@@ -14,11 +14,59 @@
   padding-right: var(--padding-large);
 }
 
-.dots {
+.dots1 {
   height: 24px;
   width: 24px;
-  fill: #b7b7b7;
+  fill: var(--c-blue);
 }
+
+.dots2 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-blue);
+  }
+
+.dots3 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-red);
+}
+
+.dots4 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-orange);
+  }
+
+.dots5 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-orange);
+}
+
+.dots6 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-orange);
+  }
+
+.dots7 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue-light);
+}
+
+.dots8 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue-light);
+}
+
+.dots9 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-blue-light);
+  }
 
 @media (max-width: 500px) {
   .page {
