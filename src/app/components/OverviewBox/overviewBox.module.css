@@ -42,20 +42,34 @@
   line-height: 1.6;
 }
 
+@media (max-width: 1360px) {
+  .container {
+    justify-content: flex-start;
+    width: 70%;
+  }
+}
+
+@media (max-width: 1022px) {
+  .container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+}
+
 @media (max-width: 840px) {
   .container {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 500px) {
-  .header {
-    padding: var(--padding-base);
+    justify-content: flex-start;
   }
 }
 
 @media (max-width: 500px) {
   .container {
+    justify-content: center;
     margin: var(--padding-base) 0px;
+    width: 100%;
+  }
+
+  .header {
+    padding: var(--padding-base);
   }
 }
