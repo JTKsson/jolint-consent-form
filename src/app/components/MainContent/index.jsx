@@ -6,6 +6,8 @@ import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
 import { Heading } from '../Heading'
+import ConsentForm from '../ConsentForm'
+
 
 export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -13,7 +15,7 @@ export const MainContent = () => {
   return (
     <>
       <div>
-        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage />}
+        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage currentIndex={currentIndex}/>}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
             <Heading />
@@ -21,46 +23,57 @@ export const MainContent = () => {
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
         )}
+
+        {formCopy[currentIndex].pageType === 'form' && (
+          <div className={Styles.content}>
+            <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
+            <p className={Styles.text}>{formCopy[currentIndex].content}</p>
+            <ConsentForm />
+          </div>
+        )}
+
         {formCopy[currentIndex].pageType === 'thanks' && <ThankYou />}
       </div>
 
-      {currentIndex !== 0 && currentIndex !== formCopy.length - 1 && (
-        <button
-          className={Styles.backButton}
-          onClick={() => setCurrentIndex(currentIndex - 1)}
-          disabled={currentIndex === 0}
-        >
-          Back
-        </button>
-      )}
-      {currentIndex !== formCopy.length - 1 &&
-        formCopy[currentIndex].buttonType !== 'submit' &&
-        formCopy[currentIndex].buttonType !== 'done' &&
-        formCopy[currentIndex].pageType !== 'thanks' && (
+      <div className={Styles.wrapButton}>
+        {currentIndex !== 0 && currentIndex !== formCopy.length - 1 && (
+          <button
+            className={Styles.backButton}
+            onClick={() => setCurrentIndex(currentIndex - 1)}
+            disabled={currentIndex === 0}
+          >
+            Back
+          </button>
+        )}
+        {currentIndex !== formCopy.length - 1 &&
+          formCopy[currentIndex].buttonType !== 'submit' &&
+          formCopy[currentIndex].buttonType !== 'done' &&
+          formCopy[currentIndex].pageType !== 'thanks' && (
+            <button
+              className={Styles.blueButton}
+              onClick={() => setCurrentIndex(currentIndex + 1)}
+              disabled={currentIndex === formCopy.length - 1}
+            >
+              {currentIndex === 0 ? 'Start' : 'Next'}
+            </button>
+          )}
+        {formCopy[currentIndex].buttonType === 'done' && (
           <button
             className={Styles.blueButton}
             onClick={() => setCurrentIndex(currentIndex + 1)}
-            disabled={currentIndex === formCopy.length - 1}
           >
-            {currentIndex === 0 ? 'Start' : 'Next'}
+            Done
           </button>
         )}
-      {formCopy[currentIndex].buttonType === 'done' && (
-        <button
-          className={Styles.blueButton}
-          onClick={() => setCurrentIndex(currentIndex + 1)}
-        >
-          Done
-        </button>
-      )}
-      {formCopy[currentIndex].buttonType === 'submit' && (
-        <button
-          className={Styles.submitButton}
-          onClick={() => setCurrentIndex(currentIndex + 1)}
-        >
-          Submit
-        </button>
-      )}
+        {formCopy[currentIndex].buttonType === 'submit' && (
+          <button
+            className={Styles.submitButton}
+            onClick={() => setCurrentIndex(currentIndex + 1)}
+          >
+            Submit
+          </button>
+        )}
+      </div>
     </>
   )
 }
