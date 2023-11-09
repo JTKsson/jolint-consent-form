@@ -27,6 +27,8 @@ export const MainContent = () => {
 
         {formCopy[currentIndex].pageType === 'form' && (
           <div className={Styles.content}>
+            <Heading />
+            <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
             <ConsentForm />
