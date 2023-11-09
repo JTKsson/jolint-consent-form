@@ -44,15 +44,16 @@
 
 @media (max-width: 1360px) {
   .container {
-    justify-content: flex-start;
-    width: 70%;
+    justify-content: center;
+    margin-right: 7rem;
+    margin-left: 7rem;
   }
 }
 
 @media (max-width: 1022px) {
   .container {
-    justify-content: flex-start;
-    width: 100%;
+    justify-content: center;
+    margin: var(--padding-base) 0px;
   }
 }
 
