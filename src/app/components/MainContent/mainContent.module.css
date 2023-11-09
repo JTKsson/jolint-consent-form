@@ -83,4 +83,9 @@
   .title {
     font-size: var(--font-size-base);
   }
+  .wrapButton{
+    .blueButton{
+      margin: 0px var(--padding-s);
+    }
+  }
 }
