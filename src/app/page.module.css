@@ -1,7 +1,6 @@
 .main {
   flex-grow: 1;
-  margin: var(--padding-xl);
-  padding: 0px var(--padding-large);
+  margin: var(--padding-large);
 }
 
 @media (max-width: 840px) {
