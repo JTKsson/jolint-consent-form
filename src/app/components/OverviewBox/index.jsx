@@ -2,13 +2,12 @@ import introIcon from 'public/overview-box-icons/introduction-icon.svg'
 import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
 import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
 import consentIcon from 'public/overview-box-icons/consent-icon.svg'
-import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
+import checkActive from 'public/overview-box-icons/checkBoxActive.svg'
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 import React from 'react'
 
-
-const OverviewBox = ({currentIndex}) => {
+const OverviewBox = ({ currentIndex }) => {
   const boxDatas = [
     {
       icon: introIcon,
@@ -52,8 +51,8 @@ const OverviewBox = ({currentIndex}) => {
     },
   ]
 
-  console.log({currentIndex})
-  
+  console.log({ currentIndex })
+
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
