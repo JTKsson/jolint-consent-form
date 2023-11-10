@@ -1,19 +1,19 @@
 const unlockBox = (index, unlockedCondition, prevBoxDatas) => {
-  const updatedBoxDatas = [...prevBoxDatas];
+  const updatedBoxDatas = [...prevBoxDatas]
   updatedBoxDatas[index] = {
     ...updatedBoxDatas[index],
     unlocked: unlockedCondition,
-  };
-  return updatedBoxDatas;
-};
+  }
+  return updatedBoxDatas
+}
 
 const checkBox = (index, checkBoxDoneCondition, prevBoxDatas) => {
-  const updatedBoxDatas = [...prevBoxDatas];
+  const updatedBoxDatas = [...prevBoxDatas]
   updatedBoxDatas[index] = {
     ...updatedBoxDatas[index],
     checkBoxDone: checkBoxDoneCondition,
-  };
-  return updatedBoxDatas;
-};
+  }
+  return updatedBoxDatas
+}
 
-export { unlockBox, checkBox };
+export { unlockBox, checkBox }

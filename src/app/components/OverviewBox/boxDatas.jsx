@@ -1,9 +1,8 @@
-// initialState.js
-import introIcon from 'public/overview-box-icons/introduction-icon.svg';
-import purposeIcon from 'public/overview-box-icons/purpose-icon.svg';
-import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg';
-import consentIcon from 'public/overview-box-icons/consent-icon.svg';
-import checkActive from 'public/overview-box-icons/checkBoxActive.jpg';
+import introIcon from 'public/overview-box-icons/introduction-icon.svg'
+import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
+import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
+import consentIcon from 'public/overview-box-icons/consent-icon.svg'
+import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
 
 const boxData = [
   {
@@ -46,6 +45,6 @@ const boxData = [
     unlocked: false,
     checkBoxDone: false,
   },
-];
+]
 
-export default boxData;
+export default boxData
