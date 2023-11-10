@@ -12,7 +12,7 @@ const boxData = [
     altCheck: 'icon for checkbox',
     title: 'Introduction',
     text: 'Let Jolint introduce themselves to you',
-    unlocked: false,
+    unlocked: true,
     checkBoxDone: false,
   },
   {
