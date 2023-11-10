@@ -40,14 +40,14 @@
   /* fonts */
 
   --font-h1: 'Poppins', sans serif;
-  --font-h2: 'Kumbh_Sans', sans serif;
-  --font-btn: 'Kumbh_Sans', sans serif;
+  --font-h2: 'Kumbh Sans', sans serif;
+  --font-btn: 'Kumbh Sans', sans serif;
 }
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {

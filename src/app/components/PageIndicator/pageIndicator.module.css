@@ -1,0 +1,91 @@
+.page {
+  margin: 0px var(--padding-xl);
+  padding: 0px var(--padding-large);
+}
+
+.circles {
+  display: flex;
+  list-style-type: none;
+  margin: var(--padding-large) var(--padding-xl) var(--padding-large) 0px;
+  padding: 0px var(--padding-large);
+}
+
+.list {
+  padding-right: var(--padding-large);
+}
+
+.dots1 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue);
+}
+
+.dots2 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-blue);
+  }
+
+.dots3 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-red);
+}
+
+.dots4 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-orange);
+  }
+
+.dots5 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-orange);
+}
+
+.dots6 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-orange);
+  }
+
+.dots7 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue-light);
+}
+
+.dots8 {
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue-light);
+}
+
+.dots9 {
+    height: 24px;
+    width: 24px;
+    fill: var(--c-blue-light);
+  }
+
+@media (max-width: 500px) {
+  .page {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .circles {
+    margin: 0px;
+    padding: var(--padding-large);
+    padding-bottom: 0px;
+  }
+
+  .dots {
+    height: 16px;
+    width: 16px;
+  }
+
+  .list {
+    padding-right: 10px;
+  }
+}
