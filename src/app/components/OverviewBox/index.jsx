@@ -1,59 +1,39 @@
-import introIcon from 'public/overview-box-icons/introduction-icon.svg'
-import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
-import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
-import consentIcon from 'public/overview-box-icons/consent-icon.svg'
-import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
-import Image from 'next/image'
-import Styles from './overviewBox.module.css'
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import { unlockBox, checkBox } from './progressFunctions'; // Adjust the path accordingly
+import boxData from './boxDatas'; // Adjust the path accordingly
 
+import Image from 'next/image';
+import Styles from './overviewBox.module.css';
 
-const OverviewBox = ({currentIndex}) => {
-  const boxDatas = [
-    {
-      icon: introIcon,
-      alt: 'icon for intro section',
-      box: checkActive,
-      altCheck: 'icon for checkbox',
-      title: 'Introduction',
-      text: 'Let Jolint introduce themselves to you',
-      unlocked: currentIndex >= 0,
-      checkBoxDone: currentIndex >= 3,
-    },
-    {
-      icon: purposeIcon,
-      alt: 'icon for purpose section',
-      box: checkActive,
-      altCheck: 'icon for checkbox',
-      title: 'Purpose',
-      text: 'The purpose of having Jolint in your company',
-      unlocked: currentIndex >= 3,
-      checkBoxDone: currentIndex >= 5,
-    },
-    {
-      icon: rightsIcon,
-      alt: 'icon for my rights section',
-      box: checkActive,
-      altCheck: 'icon for checkbox',
-      title: 'Your Rights',
-      text: 'Your rights with the processing of your personal data',
-      unlocked: currentIndex >= 5,
-      checkBoxDone: currentIndex >= 9,
-    },
-    {
-      icon: consentIcon,
-      alt: 'icon for consent section',
-      box: checkActive,
-      altCheck: 'icon for checkbox',
-      title: 'Consent',
-      text: 'Sign to improve inclusion and belonging in your company',
-      unlocked: currentIndex >= 9,
-      checkBoxDone: currentIndex >= 13,
-    },
-  ]
+const OverviewBox = ({ currentIndex }) => {
+  const storedBoxDatas = JSON.parse(localStorage.getItem('boxDatas')) || boxData;
 
-  console.log({currentIndex})
-  
+  const [boxDatas, setBoxDatas] = useState(storedBoxDatas);
+
+  useEffect(() => {
+    if (currentIndex === 0) {
+      setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas));
+    } else if (currentIndex === 3) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(0, true, unlockBox(1, true, prevBoxDatas));
+      });
+    } else if (currentIndex === 5) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(1, true, unlockBox(2, true, prevBoxDatas));
+      });
+    } else if (currentIndex === 9) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(2, true, unlockBox(3, true, prevBoxDatas));
+      });
+    } else if (currentIndex === 13) {
+      setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas));
+    }
+  }, [currentIndex]);
+
+  useEffect(() => {
+    localStorage.setItem('boxDatas', JSON.stringify(boxDatas));
+  }, [boxDatas]);
+
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
@@ -61,6 +41,7 @@ const OverviewBox = ({currentIndex}) => {
           className={`${Styles.box} ${
             !boxData.unlocked ? Styles.checkBoxLocked : ''
           }`}
+          key={boxData.title} // Add a unique key for each box
         >
           <div className={Styles.boxHeader}>
             <div>
@@ -90,7 +71,7 @@ const OverviewBox = ({currentIndex}) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default OverviewBox
+export default OverviewBox;
