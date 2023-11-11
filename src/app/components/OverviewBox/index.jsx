@@ -1,51 +1,52 @@
-import introIcon from 'public/overview-box-icons/introduction-icon.svg'
-import purposeIcon from 'public/overview-box-icons/purpose-icon.svg'
-import rightsIcon from 'public/overview-box-icons/your-rights-icon.svg'
-import consentIcon from 'public/overview-box-icons/consent-icon.svg'
-import checkActive from 'public/overview-box-icons/checkBoxActive.jpg'
+import React, { useEffect, useState } from 'react'
+import { unlockBox, checkBox } from './progressFunctions'
+import boxData from './boxDatas'
+
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
-const boxDatas = [
-  {
-    icon: introIcon,
-    alt: 'icon for intro section',
-    box: checkActive,
-    altCheck: 'icon for checkbox',
-    title: 'Introduction',
-    text: 'Let Jolint introduce themselves to you',
-  },
-  {
-    icon: purposeIcon,
-    alt: 'icon for purpose section',
-    box: checkActive,
-    altCheck: 'icon for checkbox',
-    title: 'Purpose',
-    text: 'The purpose of having Jolint in your company',
-  },
-  {
-    icon: rightsIcon,
-    alt: 'icon for my rights section',
-    box: checkActive,
-    altCheck: 'icon for checkbox',
-    title: 'Your Rights',
-    text: 'Your rights with the processing of your personal data',
-  },
-  {
-    icon: consentIcon,
-    alt: 'icon for consent section',
-    box: checkActive,
-    altCheck: 'icon for checkbox',
-    title: 'Consent',
-    text: 'Sign to improve inclusion and belonging in your company',
-  },
-]
+const OverviewBox = ({ currentIndex }) => {
+  const isLocalStorageAvailable = typeof localStorage !== 'undefined'
 
-const OverviewBox = () => {
+  const storedBoxDatas = isLocalStorageAvailable
+    ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
+    : boxData
+
+  const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
+
+  useEffect(() => {
+    if (currentIndex === 0) {
+      setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas))
+    } else if (currentIndex === 3) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(0, true, unlockBox(1, true, prevBoxDatas))
+      })
+    } else if (currentIndex === 5) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(1, true, unlockBox(2, true, prevBoxDatas))
+      })
+    } else if (currentIndex === 9) {
+      setBoxDatas((prevBoxDatas) => {
+        return checkBox(2, true, unlockBox(3, true, prevBoxDatas))
+      })
+    } else if (currentIndex === 13) {
+      setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas))
+    }
+  }, [currentIndex])
+
+  useEffect(() => {
+    localStorage.setItem('boxDatas', JSON.stringify(boxDatas))
+  }, [boxDatas])
+
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
-        <div className={Styles.box}>
+        <div
+          className={`${Styles.box} ${
+            !boxData.unlocked ? Styles.checkBoxLocked : ''
+          }`}
+          key={boxData.title}
+        >
           <div className={Styles.boxHeader}>
             <div>
               <Image
@@ -59,7 +60,9 @@ const OverviewBox = () => {
 
             <div className={Styles.checkBox}>
               <Image
-                className={Styles.imageCheckBox}
+                className={`${Styles.imageCheckBox} ${
+                  !boxData.checkBoxDone ? Styles.checkboxUnchecked : ''
+                }`}
                 src={boxData.box}
                 alt={boxData.altCheck}
                 width={30}

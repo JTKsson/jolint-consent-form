@@ -1,0 +1,22 @@
+.main {
+  margin: 0px;
+}
+
+.title {
+  font-family: var(--font-h1);
+  font-size: var(--font-size-h1);
+}
+
+@media (max-width: 840px) {
+  .title {
+    font-size: var(--font-size-h2);
+    padding-bottom: var(--padding-base);
+  }
+}
+
+@media (max-width: 500px) {
+  .title {
+    padding: 0px;
+    padding-bottom: var(--padding-base);
+  }
+}

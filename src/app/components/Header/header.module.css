@@ -1,0 +1,12 @@
+.header {
+  border-bottom: 2px solid #cecece;
+  height: 100%;
+  padding: var(--padding-large);
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: var(--padding-base);
+  }
+}

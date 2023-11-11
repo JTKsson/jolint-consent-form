@@ -1,3 +1,11 @@
 .main {
   flex-grow: 1;
+  margin: var(--padding-large);
+}
+
+@media (max-width: 840px) {
+  .main {
+    margin: 0px;
+    padding: var(--padding-large);
+  }
 }
