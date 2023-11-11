@@ -1,13 +1,10 @@
 .main {
-  display: flex;
-  flex-direction: row;
-  margin: 0px var(--padding-large);
+  margin: 0px;
 }
 
 .title {
   font-family: var(--font-h1);
   font-size: var(--font-size-h1);
-  padding: 0 var(--padding-large);
 }
 
 @media (max-width: 840px) {
@@ -20,5 +17,6 @@
 @media (max-width: 500px) {
   .title {
     padding: 0px;
+    padding-bottom: var(--padding-base);
   }
 }
