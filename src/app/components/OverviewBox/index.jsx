@@ -7,8 +7,7 @@ import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 import React from 'react'
 
-
-const OverviewBox = ({currentIndex}) => {
+const OverviewBox = ({ currentIndex }) => {
   const boxDatas = [
     {
       icon: introIcon,
@@ -52,12 +51,11 @@ const OverviewBox = ({currentIndex}) => {
     },
   ]
 
-  console.log({currentIndex})
-  
   return (
     <div className={Styles.container}>
-      {boxDatas.map((boxData) => (
+      {boxDatas.map((boxData, index) => (
         <div
+          key={index}
           className={`${Styles.box} ${
             !boxData.unlocked ? Styles.checkBoxLocked : ''
           }`}
