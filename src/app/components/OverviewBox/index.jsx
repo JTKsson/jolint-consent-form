@@ -6,10 +6,8 @@ import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
 const OverviewBox = ({ currentIndex }) => {
-  // Check if localStorage is available
   const isLocalStorageAvailable = typeof localStorage !== 'undefined'
 
-  // Use localStorage if available, otherwise use default data
   const storedBoxDatas = isLocalStorageAvailable
     ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
     : boxData
