@@ -15,7 +15,7 @@
 
 @media (max-width: 500px) {
   .main {
-    margin: var(--padding-large);
+    margin: 0px;
     padding: 0px;
   }
 }
