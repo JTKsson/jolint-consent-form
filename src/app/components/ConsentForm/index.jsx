@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { format } from 'date-fns'
+import Styles from './consentForm.module.css'
 
 const ConsentForm = () => {
   const time = new Date().toLocaleTimeString()
@@ -13,12 +14,13 @@ const ConsentForm = () => {
   setInterval(updateTime, 1000)
 
   return (
-    <div>
-      <form>
-        <p>Today, on {format(new Date(), 'EEEE d MMM yyyy H:mm:ss')}</p>
-        <p>
-          <span>
+    <div className={Styles.wrapForm}>
+      <form className={Styles.form}>
+        <p className={Styles.date}>Today, on {format(new Date(), 'EEEE d MMM yyyy H:mm:ss')}</p>
+        <p className={Styles.consent}>
+          <span className={Styles.checks}>
             <input
+              className={Styles.name}
               type="checkbox"
               name="consent"
               value="no"
