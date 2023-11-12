@@ -15,7 +15,6 @@ const OverviewBox = ({ currentIndex }) => {
     : boxData
 
   const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
-  
 
   useEffect(() => {
     if (isLocalStorageAvailable) {
@@ -45,7 +44,11 @@ const OverviewBox = ({ currentIndex }) => {
     }
   }, [boxDatas, isLocalStorageAvailable])
 
-
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  if (!isMounted) return null
 
   return (
     <div className={Styles.container}>
