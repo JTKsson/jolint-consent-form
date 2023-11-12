@@ -15,25 +15,26 @@ const OverviewBox = ({ currentIndex }) => {
   const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
 
   useEffect(() => {
-    if (currentIndex === 0) {
-      setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas))
-    } else if (currentIndex === 3) {
-      setBoxDatas((prevBoxDatas) => {
-        return checkBox(0, true, unlockBox(1, true, prevBoxDatas))
-      })
-    } else if (currentIndex === 5) {
-      setBoxDatas((prevBoxDatas) => {
-        return checkBox(1, true, unlockBox(2, true, prevBoxDatas))
-      })
-    } else if (currentIndex === 9) {
-      setBoxDatas((prevBoxDatas) => {
-        return checkBox(2, true, unlockBox(3, true, prevBoxDatas))
-      })
-    } else if (currentIndex === 13) {
-      setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas))
+    if (isLocalStorageAvailable) {
+      if (currentIndex === 0) {
+        setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas))
+      } else if (currentIndex === 3) {
+        setBoxDatas((prevBoxDatas) =>
+          checkBox(0, true, unlockBox(1, true, prevBoxDatas)),
+        )
+      } else if (currentIndex === 5) {
+        setBoxDatas((prevBoxDatas) =>
+          checkBox(1, true, unlockBox(2, true, prevBoxDatas)),
+        )
+      } else if (currentIndex === 9) {
+        setBoxDatas((prevBoxDatas) =>
+          checkBox(2, true, unlockBox(3, true, prevBoxDatas)),
+        )
+      } else if (currentIndex === 13) {
+        setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas))
+      }
     }
-  }, [currentIndex])
-
+  }, [currentIndex, isLocalStorageAvailable])
   useEffect(() => {
     localStorage.setItem('boxDatas', JSON.stringify(boxDatas))
   }, [boxDatas])
