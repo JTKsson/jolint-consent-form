@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Styles from './overviewBox.module.css';
 
 const OverviewBox = ({ currentIndex }) => {
-  const isLocalStorageAvailable = typeof localStorage !== 'undefined';
+  const isLocalStorageAvailable = process.env.NEXT_PUBLIC_LOCAL_STORAGE === 'true';
 
   const storedBoxDatas = isLocalStorageAvailable
     ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
@@ -36,6 +36,11 @@ const OverviewBox = ({ currentIndex }) => {
     }
   }, [currentIndex, isLocalStorageAvailable]);
 
+  useEffect(() => {
+    if (isLocalStorageAvailable) {
+      localStorage.setItem('boxDatas', JSON.stringify(boxDatas));
+    }
+  }, [boxDatas, isLocalStorageAvailable]);
   useEffect(() => {
     if (isLocalStorageAvailable) {
       localStorage.setItem('boxDatas', JSON.stringify(boxDatas));
