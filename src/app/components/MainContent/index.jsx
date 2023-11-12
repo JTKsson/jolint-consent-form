@@ -7,9 +7,9 @@ import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
 
 export const MainContent = () => {
-  const savedIndex = parseInt(localStorage.getItem('currentIndex')) || 0
-  const [currentIndex, setCurrentIndex] = useState(savedIndex)
-
+  const savedIndex = typeof window !== 'undefined' ? parseInt(localStorage.getItem('currentIndex')) || 0 : 0;
+  const [currentIndex, setCurrentIndex] = useState(savedIndex);
+  
   useEffect(() => {
     localStorage.setItem('currentIndex', currentIndex.toString())
   }, [currentIndex])
