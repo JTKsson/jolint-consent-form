@@ -1,4 +1,3 @@
-// 'use client'
 import React, { useEffect, useState } from 'react';
 import { unlockBox, checkBox } from './progressFunctions';
 import boxData from './boxDatas';
@@ -9,10 +8,10 @@ import Styles from './overviewBox.module.css';
 const OverviewBox = ({ currentIndex }) => {
   const isLocalStorageAvailable = typeof window !== 'undefined' && window.localStorage;
 
-  const storedBoxDatas = isLocalStorageAvailable
-    ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
-    : boxData;
-
+const storedBoxDatas = isLocalStorageAvailable
+  ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
+  : boxData;
+  
   const [boxDatas, setBoxDatas] = useState(storedBoxDatas);
 
   useEffect(() => {
