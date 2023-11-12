@@ -11,9 +11,9 @@ import ConsentForm from '../ConsentForm'
 
 
 export const MainContent = () => {
-  const savedIndex = parseInt(localStorage.getItem('currentIndex')) || 0
-  const [currentIndex, setCurrentIndex] = useState(savedIndex)
-
+  const savedIndex = typeof window !== 'undefined' ? parseInt(localStorage.getItem('currentIndex')) || 0 : 0;
+  const [currentIndex, setCurrentIndex] = useState(savedIndex);
+  
   useEffect(() => {
     localStorage.setItem('currentIndex', currentIndex.toString())
   }, [currentIndex])
