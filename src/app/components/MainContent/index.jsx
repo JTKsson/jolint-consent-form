@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
@@ -10,12 +10,19 @@ import { Heading } from '../Heading'
 import ConsentForm from '../ConsentForm'
 
 export const MainContent = () => {
-  const [currentIndex, setCurrentIndex] = useState(0)
+  const savedIndex = parseInt(localStorage.getItem('currentIndex')) || 0
+  const [currentIndex, setCurrentIndex] = useState(savedIndex)
+
+  useEffect(() => {
+    localStorage.setItem('currentIndex', currentIndex.toString())
+  }, [currentIndex])
 
   return (
     <>
       <div>
-        {formCopy[currentIndex].pageType === 'overview' && <OverviewPage currentIndex={currentIndex}/>}
+        {formCopy[currentIndex].pageType === 'overview' && (
+          <OverviewPage currentIndex={currentIndex} />
+        )}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
             <Heading />
@@ -27,6 +34,8 @@ export const MainContent = () => {
 
         {formCopy[currentIndex].pageType === 'form' && (
           <div className={Styles.content}>
+            <Heading />
+            <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
             <ConsentForm />
