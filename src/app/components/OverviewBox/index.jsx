@@ -1,44 +1,46 @@
-import React, { useEffect, useState } from 'react'
-import { unlockBox, checkBox } from './progressFunctions'
-import boxData from './boxDatas'
+import React, { useEffect, useState } from 'react';
+import { unlockBox, checkBox } from './progressFunctions';
+import boxData from './boxDatas';
 
-import Image from 'next/image'
-import Styles from './overviewBox.module.css'
+import Image from 'next/image';
+import Styles from './overviewBox.module.css';
 
 const OverviewBox = ({ currentIndex }) => {
-  const isLocalStorageAvailable = typeof localStorage !== 'undefined'
+  const isLocalStorageAvailable = typeof localStorage !== 'undefined';
 
   const storedBoxDatas = isLocalStorageAvailable
     ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
-    : boxData
+    : boxData;
 
-  const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
+  const [boxDatas, setBoxDatas] = useState(storedBoxDatas);
 
   useEffect(() => {
     if (isLocalStorageAvailable) {
       if (currentIndex === 0) {
-        setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas))
+        setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas));
       } else if (currentIndex === 3) {
         setBoxDatas((prevBoxDatas) =>
-          checkBox(0, true, unlockBox(1, true, prevBoxDatas)),
-        )
+          checkBox(0, true, unlockBox(1, true, prevBoxDatas))
+        );
       } else if (currentIndex === 5) {
         setBoxDatas((prevBoxDatas) =>
-          checkBox(1, true, unlockBox(2, true, prevBoxDatas)),
-        )
+          checkBox(1, true, unlockBox(2, true, prevBoxDatas))
+        );
       } else if (currentIndex === 9) {
         setBoxDatas((prevBoxDatas) =>
-          checkBox(2, true, unlockBox(3, true, prevBoxDatas)),
-        )
+          checkBox(2, true, unlockBox(3, true, prevBoxDatas))
+        );
       } else if (currentIndex === 13) {
-        setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas))
+        setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas));
       }
     }
-  }, [currentIndex, isLocalStorageAvailable])
-  useEffect(() => {
-    localStorage.setItem('boxDatas', JSON.stringify(boxDatas))
-  }, [boxDatas])
+  }, [currentIndex, isLocalStorageAvailable]);
 
+  useEffect(() => {
+    if (isLocalStorageAvailable) {
+      localStorage.setItem('boxDatas', JSON.stringify(boxDatas));
+    }
+  }, [boxDatas, isLocalStorageAvailable]);
   return (
     <div className={Styles.container}>
       {boxDatas.map((boxData) => (
