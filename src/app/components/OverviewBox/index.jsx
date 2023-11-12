@@ -7,17 +7,18 @@ import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
 const OverviewBox = ({ currentIndex }) => {
-  const isLocalStorageAvailable =
-    typeof window !== 'undefined' && window.localStorage
+  const [boxDatas, setBoxDatas] = useState(getInitialBoxDatas())
 
-  const storedBoxDatas = isLocalStorageAvailable
-    ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
-    : boxData
+  // const isLocalStorageAvailable =
+  //    && window.localStorage
 
-  const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
+  // const storedBoxDatas = isLocalStorageAvailable
+  //   ? JSON.parse(window.localStorage.getItem('boxDatas')) || boxData
+  //   : boxData
+
 
   useEffect(() => {
-    if (isLocalStorageAvailable) {
+    if (typeof window !== 'undefined') {
       if (currentIndex === 0) {
         setBoxDatas((prevBoxDatas) => unlockBox(0, true, prevBoxDatas))
       } else if (currentIndex === 3) {
@@ -36,19 +37,28 @@ const OverviewBox = ({ currentIndex }) => {
         setBoxDatas((prevBoxDatas) => checkBox(3, true, prevBoxDatas))
       }
     }
-  }, [currentIndex, isLocalStorageAvailable])
+  }, [currentIndex])
 
   useEffect(() => {
-    if (isLocalStorageAvailable) {
-      localStorage.setItem('boxDatas', JSON.stringify(boxDatas))
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('boxDatas', JSON.stringify(boxDatas));
     }
-  }, [boxDatas, isLocalStorageAvailable])
+  }, [boxDatas]);
 
-  const [isMounted, setIsMounted] = useState(false)
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-  if (!isMounted) return null
+  function getInitialBoxDatas() {
+    // Load from local storage or use default data
+    if (typeof window !== 'undefined') {
+      const storedBoxDatas = JSON.parse(localStorage.getItem('boxDatas')) || boxData;
+      return storedBoxDatas;
+    }
+    return boxData; // Fallback for SSR
+  }
+
+  // const [isMounted, setIsMounted] = useState(false)
+  // useEffect(() => {
+  //   setIsMounted(true)
+  // }, [])
+  // if (!isMounted) return null
 
   return (
     <div className={Styles.container}>
