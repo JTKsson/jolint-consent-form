@@ -8,18 +8,14 @@ import Styles from './overviewBox.module.css'
 
 const OverviewBox = ({ currentIndex }) => {
   
-  const isLocalStorageAvailable = typeof window !== 'undefined' && window.localStorage;
+  const isLocalStorageAvailable = typeof window !== 'undefined' && window.localStorage
+
   const storedBoxDatas = isLocalStorageAvailable
     ? JSON.parse(localStorage.getItem('boxDatas')) || boxData
-    : boxData;
-  const [boxDatas, setBoxDatas] = useState(storedBoxDatas);
+    : boxData
 
-  const updateBoxDatas = (newBoxDatas) => {
-    if (isLocalStorageAvailable) {
-      localStorage.setItem('boxDatas', JSON.stringify(newBoxDatas));
-    }
-    setBoxDatas(newBoxDatas);
-  };
+  const [boxDatas, setBoxDatas] = useState(storedBoxDatas)
+  
 
   useEffect(() => {
     if (isLocalStorageAvailable) {
