@@ -9,9 +9,8 @@ export default function Home() {
     <>
       <Header />
       <div className={Styles.main}>
-        <MainContent />
         <Heading />
-        <MainContent suppressHydrationWarning={true}/>
+        <MainContent/>
       </div>
       <Footer />
     </>
