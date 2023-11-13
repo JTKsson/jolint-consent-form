@@ -111,9 +111,12 @@
   }
 
   .wrapButton {
+    margin: 0px var(--padding-xs);
+    display: flex;
+    gap: 1rem;
+
     .blueButton {
-      margin: 0px;
-      margin-left: 8px;
+      margin: 0;
       height: 40px;
       width: 95px;
     }
