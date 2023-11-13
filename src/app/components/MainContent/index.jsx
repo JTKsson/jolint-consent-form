@@ -7,12 +7,22 @@ import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
 
 export const MainContent = () => {
-  const savedIndex = typeof window !== 'undefined' ? parseInt(localStorage.getItem('currentIndex')) || 0 : 0;
-  const [currentIndex, setCurrentIndex] = useState(savedIndex);
-  
+  const [isMounted, setIsMounted] = useState(false)
+
+  const savedIndex =
+    typeof window !== 'undefined'
+      ? parseInt(localStorage.getItem('currentIndex')) || 0
+      : 0
+  const [currentIndex, setCurrentIndex] = useState(savedIndex)
+
   useEffect(() => {
     localStorage.setItem('currentIndex', currentIndex.toString())
   }, [currentIndex])
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  if (!isMounted) return null
 
   return (
     <>
@@ -22,7 +32,7 @@ export const MainContent = () => {
         )}
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
-            <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
+            <p className={Styles.title}>{formCopy[currentIndex].subtitle}</p>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
         )}
