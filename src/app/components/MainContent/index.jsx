@@ -7,9 +7,12 @@ import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
 import { Heading } from '../Heading'
 import ConsentForm from '../ConsentForm'
+import Modal from '../Modal/index'
+import HowItWorks from '../HowItWork'
 
 
 export const MainContent = () => {
+  const [showModal, setShowModal] = useState(false);
   const [isMounted, setIsMounted] = useState(false)
 
   const savedIndex =
@@ -19,8 +22,11 @@ export const MainContent = () => {
   const [currentIndex, setCurrentIndex] = useState(savedIndex)
 
   useEffect(() => {
-    localStorage.setItem('currentIndex', currentIndex.toString())
-  }, [currentIndex])
+    localStorage.setItem('currentIndex', currentIndex.toString());
+  }, [currentIndex]);
+
+  const handleModalOpen = () => setShowModal(true);
+  const handleModalClose = () => setShowModal(false);
 
   useEffect(() => {
     setIsMounted(true)
@@ -92,8 +98,20 @@ export const MainContent = () => {
           </button>
         )}
       </div>
+      <div className={Styles.wrapButton}>
+      {currentIndex === 2 && (
+    <button className={Styles.howItWorksButton} onClick={handleModalOpen}>
+      How It Works
+    </button>
+  )}
+</div>
+
+      <Modal show={showModal} onClose={handleModalClose} title="How It Works">
+        <HowItWorks />
+      </Modal>
     </>
   )
 }
 
 export default MainContent
+
