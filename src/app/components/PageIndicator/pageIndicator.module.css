@@ -21,10 +21,10 @@
 }
 
 .dots2 {
-    height: 24px;
-    width: 24px;
-    fill: var(--c-blue);
-  }
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue);
+}
 
 .dots3 {
   height: 24px;
@@ -33,10 +33,10 @@
 }
 
 .dots4 {
-    height: 24px;
-    width: 24px;
-    fill: var(--c-orange);
-  }
+  height: 24px;
+  width: 24px;
+  fill: var(--c-orange);
+}
 
 .dots5 {
   height: 24px;
@@ -45,10 +45,10 @@
 }
 
 .dots6 {
-    height: 24px;
-    width: 24px;
-    fill: var(--c-orange);
-  }
+  height: 24px;
+  width: 24px;
+  fill: var(--c-orange);
+}
 
 .dots7 {
   height: 24px;
@@ -63,15 +63,15 @@
 }
 
 .dots9 {
-    height: 24px;
-    width: 24px;
-    fill: var(--c-blue-light);
-  }
+  height: 24px;
+  width: 24px;
+  fill: var(--c-blue-light);
+}
 
 @media (max-width: 800px) {
   .page {
     margin: 0px;
-    padding: 0px; 
+    padding: 0px;
   }
 
   .circles {
@@ -102,4 +102,3 @@
     padding-right: 10px;
   }
 }
-

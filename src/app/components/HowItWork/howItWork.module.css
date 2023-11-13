@@ -1,0 +1,131 @@
+.contentBox {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--padding-4xl);
+    width: 100%;
+  }
+  
+  .mainTitle {
+    font-family: var(--font-h1);
+    font-size: 40px;
+    font-weight: 700;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .timelineItem {
+    position: relative;
+  }
+  
+  .timelineItem::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: var(--c-blue);
+    overflow: hidden;
+  }
+  
+  .timelineItem:first-child::before {
+    margin: 20% 0;
+  }
+  
+  .timelineItem:last-child::before {
+    margin: -20% 0;
+  }
+  
+  .contentCard {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: var(--padding-base) 0;
+    padding: var(--padding-xl);
+  }
+  
+  .cardContent {
+    width: 40%;
+  }
+  
+  .cardTitle {
+    font-family: var(--font-h2);
+    font-size: 24px;
+    margin-bottom: var(--padding-s);
+  }
+  
+  .image {
+    width: 40%;
+  }
+  
+  .contentText {
+    font-family: var(--font-h2);
+    font-size: 16px;
+  }
+  
+  .eclipseDesktop {
+    background-color: var(--c-blue);
+    border-radius: 50%;
+    border: 10px solid white;
+    color: var(--c-text-light);
+    font-family: var(--font-h2);
+    height: 45px;
+    padding: var(--padding-s);
+    text-align: center;
+    text-justify: center;
+    width: 45px;
+    z-index: 99;
+  }
+  
+  .eclipseMobile {
+    background-color: var(--c-blue);
+    border-radius: 50%;
+    color: var(--c-text-light);
+    display: none;
+    font-family: var(--font-h2);
+    height: 20px;
+    padding: var(--padding-s);
+    text-align: center;
+    text-justify: center;
+    width: 20px;
+  }
+  
+  @media only screen and (max-width: 845px) {
+    .contentCard::before,
+    .timelineItem::before {
+      display: none; /* Hide the vertical line on mobile */
+    }
+  
+    .contentCard {
+      border-radius: 10px;
+      box-shadow: 0 0 18px 3px rgba(0, 0, 0, 0.2);
+      flex-direction: column;
+    }
+  
+    .eclipseDesktop {
+      display: none;
+    }
+  
+    .eclipseMobile {
+      display: none;
+      margin-top: var(--padding-large);
+    }
+  
+    .image {
+      width: 50%;
+    }
+  
+    .cardContent {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+  }

@@ -4,7 +4,6 @@ import boxData from './boxDatas'
 import Image from 'next/image'
 import Styles from './overviewBox.module.css'
 
-
 const OverviewBox = ({ currentIndex }) => {
   const [boxDatas, setBoxDatas] = useState(() => getInitialBoxDatas())
 
