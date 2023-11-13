@@ -72,9 +72,35 @@
   .submitButton:hover {
     background-color: #f4770abd;
   }
+
+  .howItWorksButton {
+    background-color: var(--c-orange);
+    border: 3px solid var(--c-orange);
+    border: none;
+    border-radius: 10px;
+    color: var(--c-text-light);
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: var(--font-btn);
+    font-size: 14px;
+    font-weight: 700;
+    height: 45px;
+    margin: 10px var(--padding-large);
+    text-align: center;
+    width: 120px;
+  }
+
+  .howItWorksButton:hover {
+    background-color: #f4770abd;
+    border: 3px solid #f4770abd;
+  }
 }
 
 @media (max-width: 500px) {
+  .howItWorksButton {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
   .content {
     margin: 0px;
     padding: 0px;
