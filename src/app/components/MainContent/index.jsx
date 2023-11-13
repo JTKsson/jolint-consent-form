@@ -12,8 +12,6 @@ import Modal from '../Modal/index'
 import HowItWorks from '../HowItWork'
 
 export const MainContent = () => {
-  const savedIndex = parseInt(localStorage.getItem('currentIndex')) || 0;
-  const [currentIndex, setCurrentIndex] = useState(savedIndex);
   const [showModal, setShowModal] = useState(false);
   const [isMounted, setIsMounted] = useState(false)
 
