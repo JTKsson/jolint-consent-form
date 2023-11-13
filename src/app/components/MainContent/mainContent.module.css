@@ -21,7 +21,7 @@
     cursor: pointer;
     flex-shrink: 0;
     font-family: var(--font-btn);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     height: 45px;
     margin: 0px var(--padding-large);
@@ -41,7 +41,7 @@
     cursor: pointer;
     flex-shrink: 0;
     font-family: var(--font-btn);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     height: 45px;
     margin: 0px 0px 0px var(--padding-large);
@@ -61,7 +61,7 @@
     cursor: pointer;
     flex-shrink: 0;
     font-family: var(--font-btn);
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 700;
     height: 45px;
     margin: 10px;
@@ -84,23 +84,21 @@
     font-size: var(--font-size-base);
   }
 
-  .wrapButton{
-    margin: 0px;
-    
-    .blueButton{
+  .wrapButton {
+    .blueButton {
       margin: 0px;
       margin-left: 8px;
       height: 40px;
       width: 95px;
     }
 
-    .backButton{
+    .backButton {
       margin: 0px;
       height: 40px;
       width: 95px;
     }
 
-    .submitButton{
+    .submitButton {
       height: 40px;
       width: 95px;
     }

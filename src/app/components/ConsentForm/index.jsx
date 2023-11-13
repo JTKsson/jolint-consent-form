@@ -27,6 +27,8 @@ const ConsentForm = () => {
               id="consent"
               unchecked
               required
+              height="30px"
+              width="30px"
             />
           </span>
           I,{' '}
