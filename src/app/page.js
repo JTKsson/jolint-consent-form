@@ -6,9 +6,9 @@ import Styles from './page.module.css'
 export default function Home() {
   return (
     <>
+    <MainContent />
       <Header />
       <div className={Styles.main}>
-        <MainContent />
       </div>
       <Footer />
     </>
