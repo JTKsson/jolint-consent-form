@@ -1,5 +1,6 @@
 .main {
   margin: 0px;
+  margin-bottom: var(--padding-large);
 }
 
 .title {

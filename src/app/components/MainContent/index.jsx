@@ -5,7 +5,6 @@ import formCopy from '@/app/assets/formCopy'
 import { OverviewPage } from '../OverviewPage'
 import ThankYou from '../ThankYou'
 import Styles from './mainContent.module.css'
-import PageIndicator from '../PageIndicator'
 import { Heading } from '../Heading'
 import ConsentForm from '../ConsentForm'
 import Modal from '../Modal/index'
@@ -42,7 +41,6 @@ export const MainContent = () => {
         {formCopy[currentIndex].pageType === 'info' && (
           <div className={Styles.content}>
             <Heading />
-            <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
           </div>
@@ -51,7 +49,6 @@ export const MainContent = () => {
         {formCopy[currentIndex].pageType === 'form' && (
           <div className={Styles.content}>
             <Heading />
-            <PageIndicator />
             <h2 className={Styles.title}>{formCopy[currentIndex].subtitle}</h2>
             <p className={Styles.text}>{formCopy[currentIndex].content}</p>
             <ConsentForm />
