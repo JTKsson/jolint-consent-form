@@ -15,6 +15,13 @@ export const MainContent = () => {
   const savedIndex = parseInt(localStorage.getItem('currentIndex')) || 0;
   const [currentIndex, setCurrentIndex] = useState(savedIndex);
   const [showModal, setShowModal] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
+
+  const savedIndex =
+    typeof window !== 'undefined'
+      ? parseInt(localStorage.getItem('currentIndex')) || 0
+      : 0
+  const [currentIndex, setCurrentIndex] = useState(savedIndex)
 
   useEffect(() => {
     localStorage.setItem('currentIndex', currentIndex.toString());
@@ -22,6 +29,11 @@ export const MainContent = () => {
 
   const handleModalOpen = () => setShowModal(true);
   const handleModalClose = () => setShowModal(false);
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  if (!isMounted) return null
 
   return (
     <>

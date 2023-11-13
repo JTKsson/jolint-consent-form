@@ -1,5 +1,6 @@
 .wrapForm {
     padding-bottom: var(--padding-large);
+    max-width: 869px;
 }
 
 .form {
