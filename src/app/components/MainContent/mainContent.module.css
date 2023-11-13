@@ -84,21 +84,21 @@
     font-size: var(--font-size-base);
   }
 
-  .wrapButton{
-    .blueButton{
+  .wrapButton {
+    .blueButton {
       margin: 0px;
       margin-left: 8px;
       height: 40px;
       width: 95px;
     }
 
-    .backButton{
+    .backButton {
       margin: 0px;
       height: 40px;
       width: 95px;
     }
 
-    .submitButton{
+    .submitButton {
       height: 40px;
       width: 95px;
     }

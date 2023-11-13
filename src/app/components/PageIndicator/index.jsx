@@ -6,7 +6,7 @@ const PageIndicator = () => {
     <div className={Styles.page}>
       <ul className={Styles.circles}>
         <li className={Styles.list}>
-          <PiCircleDuotone className={Styles.dots1}  />
+          <PiCircleDuotone className={Styles.dots1} />
         </li>
         <li className={Styles.list}>
           <PiCircleDuotone className={Styles.dots2} />
