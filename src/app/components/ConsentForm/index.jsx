@@ -16,7 +16,9 @@ const ConsentForm = () => {
   return (
     <div className={Styles.wrapForm}>
       <form className={Styles.form}>
-        <p className={Styles.date}>Today, on {format(new Date(), 'EEEE d MMM yyyy H:mm:ss')}</p>
+        <p className={Styles.date}>
+          Today, on {format(new Date(), 'EEEE d MMM yyyy H:mm:ss')}
+        </p>
         <p className={Styles.consent}>
           <span className={Styles.checks}>
             <input
