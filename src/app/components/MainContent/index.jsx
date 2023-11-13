@@ -11,12 +11,22 @@ import ConsentForm from '../ConsentForm'
 
 
 export const MainContent = () => {
-  const savedIndex = typeof window !== 'undefined' ? parseInt(localStorage.getItem('currentIndex')) || 0 : 0;
-  const [currentIndex, setCurrentIndex] = useState(savedIndex);
-  
+  const [isMounted, setIsMounted] = useState(false)
+
+  const savedIndex =
+    typeof window !== 'undefined'
+      ? parseInt(localStorage.getItem('currentIndex')) || 0
+      : 0
+  const [currentIndex, setCurrentIndex] = useState(savedIndex)
+
   useEffect(() => {
     localStorage.setItem('currentIndex', currentIndex.toString())
   }, [currentIndex])
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
+  if (!isMounted) return null
 
   return (
     <>

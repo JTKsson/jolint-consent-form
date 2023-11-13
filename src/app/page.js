@@ -9,7 +9,12 @@ export default function Home() {
     <>
       <Header />
       <div className={Styles.main}>
+<<<<<<< HEAD
         <MainContent />
+=======
+        <Heading />
+        <MainContent suppressHydrationWarning={true}/>
+>>>>>>> feature/p-239-overview-box-progress-permanent
       </div>
       <Footer />
     </>
