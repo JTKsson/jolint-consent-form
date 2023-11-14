@@ -96,11 +96,8 @@
   }
 }
 
-@media (max-width: 500px) {
-  .howItWorksButton {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
+@media only screen and (max-width: 500px) {
+ 
   .content {
     margin: 0px;
     padding: 0px;
@@ -125,6 +122,14 @@
     }
 
     .submitButton {
+      height: 40px;
+      width: 95px;
+    }
+
+    .howItWorksButton {
+      font-size: 14px;
+      padding: 4px 8px;
+      margin: 10px 0;
       height: 40px;
       width: 95px;
     }
