@@ -43,6 +43,7 @@ const OverviewBox = ({ currentIndex }) => {
     }
     return boxData
   }
+  
 
   return (
     <div className={Styles.container}>
